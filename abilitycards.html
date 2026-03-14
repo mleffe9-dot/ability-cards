@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aspect Cards</title>
+
+<style>
+:root {
+  --bg: #0e1114;
+  --card-bg: #1a1e22;
+  --text: #e6e6e6;
+  --muted: #b5b5b5;
+  --divider: #2b2f35;
+}
+
+/* ---------- Page ---------- */
+body {
+  margin: 0;
+  padding: 2rem;
+  background: var(--bg);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ---------- Card ---------- */
+.card {
+  background: var(--card-bg);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.4);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Header ---------- */
+.header {
+  padding: 1rem;
+  background: var(--accent);
+  color: #fff;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  letter-spacing: .04em;
+}
+
+.header span {
+  font-size: .9rem;
+  opacity: .85;
+}
+
+/* ---------- Image Placeholder ---------- */
+.image-slot {
+  height: 160px;
+  background: rgba(255,255,255,.08);
+}
+
+/* ---------- Body ---------- */
+.body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ---------- Fragment Row ---------- */
+.fragments {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--muted);
+  border-bottom: 1px solid var(--divider);
+  padding-bottom: .75rem;
+}
+
+.icons {
+  display: flex;
+  gap: .4rem;
+}
+
+.icon-slot {
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--muted);
+  border-radius: 4px;
+}
+
+/* ---------- Flavor Text ---------- */
+.flavor {
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* ---------- Description ---------- */
+.desc {
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
+
+.desc-block {
+  line-height: 1.45;
+}
+
+/* ---------- Element Colors ---------- */
+.solar     { --accent: #ff7a18; }
+.arc       { --accent: #f5e642; color:#000; }
+.void      { --accent: #7a4cff; }
+.stasis    { --accent: #4bb7ff; }
+.strand    { --accent: #3bff8f; color:#000; }
+.wither    { --accent: #c13b3b; }
+.prismatic { --accent: #ff69d4; }
+
+</style>
+</head>
+
+<body>
+
+<div class="grid">
+
+  <!-- SOLAR -->
+  <div class="card solar">
+    <div class="header">
+      <h1>SUNBURST</h1>
+      <span>Solar Aspect</span>
+    </div>
+    <div class="image-slot"></div>
+    <div class="body">
+      <div class="fragments">
+        <span>Fragment Slots (2)</span>
+        <div class="icons">
+          <div class="icon-slot"></div>
+          <div class="icon-slot"></div>
+        </div>
+      </div>
+      <div class="flavor">Your flame never flickers.</div>
+      <div class="desc">
+        <div class="desc-block">Aspect effect description goes here.</div>
+        <div class="desc-block">Secondary effect description goes here.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARC -->
+  <div class="card arc">
+    <div class="header">
+      <h1>KNOCKOUT</h1>
+      <span>Arc Aspect</span>
+    </div>
+    <div class="image-slot"></div>
+    <div class="body">
+      <div class="fragments">
+        <span>Fragment Slots (2)</span>
+        <div class="icons">
+          <div class="icon-slot"></div>
+          <div class="icon-slot"></div>
+        </div>
+      </div>
+      <div class="flavor">An orb of dancing plasma.</div>
+      <div class="desc">
+        <div class="desc-block">Primary Arc effect.</div>
+        <div class="desc-block">Amplified bonus effect.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VOID -->
+  <div class="card void">
+    <div class="header">
+      <h1>NULL FIELD</h1>
+      <span>Void Aspect</span>
+    </div>
+    <div class="image-slot"></div>
+    <div class="body">
+      <div class="fragments">
+        <span>Fragment Slots (2)</span>
+        <div class="icons">
+          <div class="icon-slot"></div>
+          <div class="icon-slot"></div>
+        </div>
+      </div>
+      <div class="flavor">All light bends inward.</div>
+      <div class="desc">
+        <div class="desc-block">Void suppression or weakening.</div>
+        <div class="desc-block">Overshield or devour interaction.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STASIS -->
+  <div class="card stasis">
+    <div class="header">
+      <h1>PERMAFROST</h1>
+      <span>Stasis Aspect</span>
+    </div>
+    <div class="image-slot"></div>
+    <div class="body">
+      <div class="fragments">
+        <span>Fragment Slots (2)</span>
+        <div class="icons">
+          <div class="icon-slot"></div>
+          <div class="icon-slot"></div>
+        </div>
+      </div>
+      <div class="flavor">Nothing moves forever.</div>
+      <div class="desc">
+        <div class="desc-block">Freeze or slow behavior.</div>
+        <div class="desc-block">Shatter synergy.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STRAND -->
+  <div class="card strand">
+    <div class="header">
+      <h1>THREADBOUND</h1>
+      <span>Strand Aspect</span>
+    </div>
+    <div class="image-slot"></div>
+    <div class="body">
+      <div class="fragments">
+        <span>Fragment Slots (2)</span>
+        <div class="icons">
+          <div class="icon-slot"></div>
+          <div class="icon-slot"></div>
+        </div>
+      </div>
+      <div class="flavor">All things are connected.</div>
+      <div class="desc">
+        <div class="desc-block">Suspend or unravel effects.</div>
+        <div class="desc-block">Threadling synergy.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WITHER -->
+  <div class="card wither">
+    <div class="header">
+      <h1>Unnova</h1>
+      <span>Wither Aspect</span>
+    </div>
+    <div class="image-slot"></div>
+    <div class="body">
+      <div class="fragments">
+        <span>Fragment Slots (2)</span>
+        <div class="icons">
+          <div class="icon-slot"></div>
+          <div class="icon-slot"></div>
+        </div>
+      </div>
+      <div class="flavor">Everything rots eventually.</div>
+      <div class="desc">
+        <div class="desc-block">Decay-based effect.</div>
+        <div class="desc-block">Sustain or execution payoff.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRISMATIC -->
+  <div class="card prismatic">
+    <div class="header">
+      <h1>SPECTRUM</h1>
+      <span>Prismatic Aspect</span>
+    </div>
+    <div class="image-slot"></div>
+    <div class="body">
+      <div class="fragments">
+        <span>Fragment Slots (2)</span>
+        <div class="icons">
+          <div class="icon-slot"></div>
+          <div class="icon-slot"></div>
+        </div>
+      </div>
+      <div class="flavor">All elements answer your call.</div>
+      <div class="desc">
+        <div class="desc-block">Multi-element interaction.</div>
+        <div class="desc-block">Dynamic bonus behavior.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
